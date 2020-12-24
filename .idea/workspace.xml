@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3684a01e-9a5d-4ff4-9123-bd9d0556fe33" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/intro_junit/ProcesadorDeBoleto/ProcessadorDeBoleto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProcessadordeBoleto/ProcessadorDeBoleto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProcessadorDeBoleto/ProcessadorDeBoleto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ProcessadorDeBoleto/ProcessadorDeBoletoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ProcessadorDeBoleto/ProcessadorDeBoletoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,4 +1,4 @@
-package processadorDeBoleto;
+package ProcessadorDeBoleto;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -11,27 +11,38 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import java.util.*;
 
 public class ProcessadorDeBoletoTest {
 
+    private Fatura fat;
+    private Boleto bol1;
+    private Boleto bol2;
+    private ProcessadorDeBoleto processaBoleto;
+    private List<Boleto> boletos;
 
-    @Test
-    public void FaturaPagaTest() {
+    @BeforeEach
+    public void inicializaFaturaPagaTest() {
 
-        Fatura fat = new Fatura(1, 1000, "Ramon");
-        boolean statusFatura = true;
+        fat = new Fatura(1, 700.0, "Ramon");
 
-        Boleto bol1 = new Boleto(1, 500);
-        Boleto bol2 = new Boleto(2, 200);
+        bol1 = new Boleto(1, 500.00);
+        bol2 = new Boleto(2, 200.00);
 
-        List<Boleto> boletos = new ArrayList<Boleto>();
+        boletos = new ArrayList<Boleto>();
 
         boletos.add(bol1);
         boletos.add(bol2);
 
-        Assert.assertEquals(statusFatura, pgFatura(fat, boletos));
-
+        processaBoleto = new ProcessadorDeBoleto();
     }
 
+    @Test
+    public void FaturaPagaTest() {
+
+        boolean statusFatura = true;
+        Assert.assertEquals(statusFatura, processaBoleto.pagamentoFatura(fat, boletos));
+
+    }
 }
