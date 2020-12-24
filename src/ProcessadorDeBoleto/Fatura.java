@@ -7,11 +7,12 @@ public class Fatura {
     private int id;
     private double valorTotal;
     private String nome;
+    private String status;
 
     public Fatura(int i, double vT, String n) {
         this.id = i;
         this.valorTotal = vT;
-        this. nome = n;
+        this.nome = n;
     }
 
     public int getId() {
@@ -37,4 +38,5 @@ public class Fatura {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
 }

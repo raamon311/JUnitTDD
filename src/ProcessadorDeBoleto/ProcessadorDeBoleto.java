@@ -3,19 +3,29 @@ package ProcessadorDeBoleto;
 import java.util.*;
 
 public class ProcessadorDeBoleto {
-    public boolean pagamentoFatura(Fatura fat, List<Boleto> boletos) {
+
+    public void criarBoleto(Boleto bol){
+        int id = bol.getId();
+        double valorPago = bol.getValor();
+        String tipoPagamento = "BOLETO";
+        Pagamento pg = new Pagamento(id, valorPago, tipoPagamento);
+
+    }
+
+    public void pagamentoFatura(Fatura fat, List<Boleto> boletos) {
 
         double valTotalBoleto = 0;
 
         for(Boleto bol : boletos){
+            Pagamento(bol);
             valTotalBoleto += bol.getValor();
         }
 
         if (valTotalBoleto >= fat.getValorTotal()){
-            return true;
+            fat.setStatus("FATURA PAGA!");
         }
         else {
-            return false;
+            fat.setStatus("FATURA PENDENTE DE PAGAMENTO!");
         }
     }
 }
