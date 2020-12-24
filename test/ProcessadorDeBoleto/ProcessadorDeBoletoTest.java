@@ -43,7 +43,7 @@ public class ProcessadorDeBoletoTest {
     @Test
     public void FaturaPagaTest() {
 
-        String statusFatura = "PAGA";
+        String statusFatura = "FATURA PAGA!";
         processaBoleto.pagamentoFatura(fat, boletos);
         Assert.assertEquals(statusFatura, fat.getStatus());
 
@@ -51,9 +51,9 @@ public class ProcessadorDeBoletoTest {
     @Test
     public void FaturaNaoPagaTest(){
 
-        String statusExpected = "NAO PAGA";
-        processaBoletoBol.pagamentoFatura(fat2, boletos);
-        Assert.assertEquals(statusExpected, fat2.getStatus());
+        String statusFatura = "FATURA PENDENTE DE PAGAMENTO!";
+        processaBoleto.pagamentoFatura(fat2, boletos);
+        Assert.assertEquals(statusFatura, fat2.getStatus());
 
 
     }

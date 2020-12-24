@@ -7,8 +7,8 @@ public class ProcessadorDeBoleto {
     public void criarBoleto(Boleto bol){
         int id = bol.getId();
         double valorPago = bol.getValor();
-        String tipoPagamento = "BOLETO";
-        Pagamento pg = new Pagamento(id, valorPago, tipoPagamento);
+        String tipoPg = "BOLETO";
+        Pagamento pg = new Pagamento(id, valorPago, tipoPg);
 
     }
 
@@ -17,7 +17,7 @@ public class ProcessadorDeBoleto {
         double valTotalBoleto = 0;
 
         for(Boleto bol : boletos){
-            Pagamento(bol);
+            criarBoleto(bol);
             valTotalBoleto += bol.getValor();
         }
 
